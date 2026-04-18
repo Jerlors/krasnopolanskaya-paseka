@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Краснополянская пасека | Горный мёд</title>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">🍯 <span>Краснополянская<br>пасека</span></a>
+      <button onclick="toggleDrawer()" style="position:relative;">🛒 <span class="cart-badge">0</span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <span style="background:#fff;padding:6px 12px;border-radius:20px;font-size:12px;font-weight:600;color:var(--color-honey);box-shadow:0 2px 8px rgba(0,0,0,0.05);">Свежий сбор 2026</span>
+      <h1>Горный мёд<br>с альпийских лугов</h1>
+      <p>С высоты 1500 м. Без посредников.</p>
+      <a href="catalog.html" class="btn btn-primary">Перейти в каталог</a>
+    </section>
+
+    <section class="container">
+      <div class="stories-row">
+        <div class="story-item"><div class="story-icon">🐝</div><div class="story-label">Пасека</div></div>
+        <div class="story-item"><div class="story-icon">🏔️</div><div class="story-label">Горы</div></div>
+        <div class="story-item"><div class="story-icon">📦</div><div class="story-label">Упаковка</div></div>
+        <div class="story-item"><div class="story-icon">⭐</div><div class="story-label">Отзывы</div></div>
+      </div>
+
+      <h2 class="section-title">Хиты продаж</h2>
+      <div class="product-grid">
+        <a href="product.html?id=1" class="card product-card">
+          <div class="product-img">🍯</div>
+          <h3 style="font-size:14px;">Горное разнотравье</h3>
+          <p style="font-size:12px;color:var(--text-muted);margin:4px 0 12px;">500 г</p>
+          <div class="product-meta">
+            <span style="font-weight:700;">950 ₽</span>
+            <button class="btn btn-primary btn-sm" onclick="event.preventDefault(); window.cart.add({id:1,name:'Горное разнотравье',price:950,img:'🍯'})">+</button>
+          </div>
+        </a>
+        <a href="product.html?id=2" class="card product-card">
+          <div class="product-img">🌰</div>
+          <h3 style="font-size:14px;">Каштановый</h3>
+          <p style="font-size:12px;color:var(--text-muted);margin:4px 0 12px;">500 г</p>
+          <div class="product-meta">
+            <span style="font-weight:700;">1 100 ₽</span>
+            <button class="btn btn-primary btn-sm" onclick="event.preventDefault(); window.cart.add({id:2,name:'Каштановый',price:1100,img:'🌰'})">+</button>
+          </div>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <nav class="bottom-nav">
+    <a href="index.html" class="nav-link active">🏠<span>Главная</span></a>
+    <a href="catalog.html" class="nav-link">🔍<span>Каталог</span></a>
+    <a href="about.html" class="nav-link">👤<span>О нас</span></a>
+    <a href="contacts.html" class="nav-link">📍<span>Контакты</span></a>
+  </nav>
+
+  <div class="drawer-overlay" id="cart-overlay" onclick="toggleDrawer()"></div>
+  <aside class="drawer" id="cart-drawer">
+    <div style="padding:16px;border-bottom:1px solid #eee;display:flex;justify-content:space-between;">
+      <b>Корзина</b> <button onclick="toggleDrawer()">✕</button>
+    </div>
+    <div id="cart-items" style="padding:16px;flex:1;overflow-y:auto;"></div>
+    <div style="padding:16px;border-top:1px solid #eee;background:#fff;">
+      <div style="display:flex;justify-content:space-between;margin-bottom:12px;">
+        <span>Итого:</span> <span id="cart-total" style="font-weight:700;font-size:18px;">0 ₽</span>
+      </div>
+      <a href="cart.html" class="btn btn-primary" style="width:100%;">Оформить заказ</a>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast"></div>
+  <script src="js/app.js" type="module"></script>
+</body>
+</html>

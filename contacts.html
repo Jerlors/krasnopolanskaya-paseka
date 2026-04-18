@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Контакты | Краснополянская пасека</title>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css"><link rel="stylesheet" href="css/reset.css"><link rel="stylesheet" href="css/layout.css"><link rel="stylesheet" href="css/components.css"><link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+  <header class="site-header"><div class="container header-inner"><a href="index.html" class="logo">🍯 <span>Краснополянская<br>пасека</span></a><button onclick="toggleDrawer()" style="position:relative;">🛒 <span class="cart-badge">0</span></button></div></header>
+  <main class="container" style="padding-top:calc(var(--header-height) + 32px);">
+    <h1 class="section-title">Контакты</h1>
+    <div class="card contact-form" style="margin-bottom:20px;">
+      <form id="contact-form">
+        <input type="text" placeholder="Ваше имя" required>
+        <input type="tel" placeholder="+7 (___) ___-__-__" required>
+        <textarea rows="4" placeholder="Вопрос или комментарий"></textarea>
+        <button type="submit" class="btn btn-primary" style="width:100%;">Отправить</button>
+      </form>
+    </div>
+    <div class="card" style="margin-bottom:16px;">
+      <h3 style="margin-bottom:8px;">📞 Телефон</h3>
+      <p><a href="tel:+79990000000" style="color:var(--color-pine);font-weight:600;">+7 (999) 000-00-00</a></p>
+    </div>
+    <div class="card">
+      <h3 style="margin-bottom:8px;">📍 Самовывоз</h3>
+      <p style="color:var(--text-muted);font-size:14px;">Красная Поляна, ул. Горная, 12 (предварительный звонок)</p>
+    </div>
+  </main>
+  <nav class="bottom-nav">
+    <a href="index.html" class="nav-link">🏠<span>Главная</span></a>
+    <a href="catalog.html" class="nav-link">🔍<span>Каталог</span></a>
+    <a href="about.html" class="nav-link">👤<span>О нас</span></a>
+    <a href="contacts.html" class="nav-link active">📍<span>Контакты</span></a>
+  </nav>
+  <div class="drawer-overlay" id="cart-overlay" onclick="toggleDrawer()"></div>
+  <aside class="drawer" id="cart-drawer"><div style="padding:16px;border-bottom:1px solid #eee;display:flex;justify-content:space-between;"><b>Корзина</b><button onclick="toggleDrawer()">✕</button></div><div id="cart-items" style="padding:16px;flex:1;overflow-y:auto;"></div><div style="padding:16px;border-top:1px solid #eee;background:#fff;"><a href="cart.html" class="btn btn-primary" style="width:100%;">Оформить заказ</a></div></aside>
+  <div class="toast" id="toast"></div>
+  <script src="js/app.js" type="module"></script>
+</body>
+</html>

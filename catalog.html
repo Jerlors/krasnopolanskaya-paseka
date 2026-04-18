@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Каталог | Краснополянская пасека</title>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">🍯 <span>Краснополянская<br>пасека</span></a>
+      <button onclick="toggleDrawer()" style="position:relative;">🛒 <span class="cart-badge">0</span></button>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 class="section-title" style="margin-top:16px;">Каталог продукции</h1>
+    <div class="filters-bar">
+      <button class="filter-btn active" data-cat="">Все</button>
+      <button class="filter-btn" data-cat="honey">Мёд</button>
+      <button class="filter-btn" data-cat="perga">Перга</button>
+      <button class="filter-btn" data-cat="sets">Наборы</button>
+    </div>
+    <div id="catalog-container" class="product-grid"></div>
+  </main>
+
+  <nav class="bottom-nav">
+    <a href="index.html" class="nav-link">🏠<span>Главная</span></a>
+    <a href="catalog.html" class="nav-link active">🔍<span>Каталог</span></a>
+    <a href="about.html" class="nav-link">👤<span>О нас</span></a>
+    <a href="contacts.html" class="nav-link">📍<span>Контакты</span></a>
+  </nav>
+
+  <div class="drawer-overlay" id="cart-overlay" onclick="toggleDrawer()"></div>
+  <aside class="drawer" id="cart-drawer">
+    <div style="padding:16px;border-bottom:1px solid #eee;display:flex;justify-content:space-between;"><b>Корзина</b><button onclick="toggleDrawer()">✕</button></div>
+    <div id="cart-items" style="padding:16px;flex:1;overflow-y:auto;"></div>
+    <div style="padding:16px;border-top:1px solid #eee;background:#fff;"><a href="cart.html" class="btn btn-primary" style="width:100%;">Оформить заказ</a></div>
+  </aside>
+  <div class="toast" id="toast"></div>
+  <script src="js/app.js" type="module"></script>
+</body>
+</html>

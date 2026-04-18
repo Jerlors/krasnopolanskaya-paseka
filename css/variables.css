@@ -1,0 +1,22 @@
+:root {
+  --color-honey: #D4930A;
+  --color-honey-light: #FFF9E6;
+  --color-pine: #2C4A34;
+  --color-pine-dark: #14241B;
+  --color-cream: #F9F6F0;
+  --color-sand: #F0EAD6;
+  --text-muted: rgba(20, 36, 27, 0.6);
+  
+  --font-display: 'Comfortaa', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-full: 999px;
+  
+  --shadow-soft: 0 4px 16px rgba(20, 36, 27, 0.06);
+  
+  --header-height: 56px;
+  --nav-height: 64px;
+}

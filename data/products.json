@@ -1,0 +1,8 @@
+[
+  { "id": 1, "name": "Горное разнотравье", "price": 950, "weight": "500 г", "img": "🍯", "cat": "honey" },
+  { "id": 2, "name": "Каштановый", "price": 1100, "weight": "500 г", "img": "🌰", "cat": "honey" },
+  { "id": 3, "name": "Липовый", "price": 980, "weight": "500 г", "img": "🌸", "cat": "honey" },
+  { "id": 4, "name": "Перга пчелиная", "price": 1400, "weight": "250 г", "img": "🐝", "cat": "perga" },
+  { "id": 5, "name": "Прополис", "price": 600, "weight": "50 г", "img": "🧱", "cat": "propolis" },
+  { "id": 6, "name": "Набор «Поляна»", "price": 2300, "weight": "3 вида", "img": "🎁", "cat": "sets" }
+]
