@@ -12,7 +12,36 @@
   <link rel="stylesheet" href="css/pages.css">
 </head>
 <body>
-  <header class="site-header"><div class="container header-inner"><a href="index.html" class="logo">🍯 <span>Краснополянская<br>пасека</span></a><button onclick="toggleDrawer()" style="position:relative;">🛒 <span class="cart-badge">0</span></button></div></header>
+  <header class="site-header">
+  <div class="container header-inner">
+    <!-- Логотип -->
+    <a href="index.html" class="logo">
+      <img src="img/logo/logo.svg" alt="Краснополянская пасека" class="logo-img">
+      <span class="logo-text">Краснополянская<br>пасека</span>
+    </a>
+    
+    <!-- Десктопное меню (только на ПК) -->
+    <nav class="desktop-nav desktop-only">
+      <a href="index.html">Главная</a>
+      <a href="catalog.html">Каталог</a>
+      <a href="about.html">О пасеке</a>
+      <a href="delivery.html">Доставка</a>
+      <a href="contacts.html">Контакты</a>
+    </nav>
+    
+    <!-- Корзина -->
+    <button onclick="toggleDrawer()" style="position:relative;" class="mobile-only">
+      🛒 <span class="cart-badge">0</span>
+    </button>
+    
+    <!-- Корзина + меню на ПК -->
+    <div class="desktop-only" style="display:flex;gap:16px;align-items:center;">
+      <button onclick="toggleDrawer()" style="position:relative;">
+        🛒 <span class="cart-badge">0</span>
+      </button>
+    </div>
+  </div>
+</header>
   <main class="container" style="padding-top:calc(var(--header-height) + 32px);">
     <h1 class="section-title">О нашей пасеке</h1>
     <p style="margin-bottom:16px;line-height:1.6;">Мы находимся в Красной Поляне на высоте 1200 метров. Здесь нет заводов и машин, только горный воздух и альпийские травы.</p>
